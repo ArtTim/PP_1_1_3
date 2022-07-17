@@ -9,20 +9,28 @@ public class Main {
 
         UserServiceImpl userService = new UserServiceImpl();
         userService.createUsersTable();
-        userService.saveUser("Vlad", "Ok", (byte)15);
+        userService.saveUser("Vyacheslav", "Popov", (byte)15);
         userService.saveUser("Sergey", "Buza", (byte)27);
         userService.saveUser("Igor", "Dolinnik", (byte)25);
+        userService.saveUser("Timur", "Bulatov", (byte)25);
+
+        userService.removeUserById(2);
+        userService.getAllUsers();
+
+        for(User el : userService.getAllUsers()) {
+            System.out.println(el);
+        }
+        System.out.println("После удаления пользователя:");
         userService.getAllUsers();
         for(User el : userService.getAllUsers()) {
             System.out.println(el);
         }
-        userService.removeUserById(3);
-        System.out.println("После удаления:");
+//        userService.dropUsersTable();
+        System.out.println("После удаления таблицы:");
         userService.getAllUsers();
         for(User el : userService.getAllUsers()) {
             System.out.println(el);
         }
-        userService.dropUsersTable();
 
     }
 }
