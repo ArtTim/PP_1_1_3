@@ -3,6 +3,14 @@ package jm.task.core.jdbc;
 import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.service.UserServiceImpl;
 
+//1) Для каждой задачи должен быть свой репозиторий и 1 ветка.
+//2) Работа с БД должна быть в дао слое. Сервис вызывает методы дао.
+//3) PreparedStatement использовать только там, где он нужен.
+//4) Statement нет необходимости использовать как ресурс.
+//5) Добавь логику транзакций.
+
+
+
 public class Main {
     public static void main(String[] args) {
         // реализуйте алгоритм здесь
